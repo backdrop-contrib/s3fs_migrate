@@ -153,7 +153,7 @@ function s3fs_migrate_admin() {
       '#type'           => 'checkbox',
       '#title'          => t("Backup migrated files"),
       '#description'    => t("If enabled then the local copy of files migrated to S3 will be moved to the folder <em>s3fs_migrate_backup</em> in the private file system immediately after migration, \"just in case\"."),
-      '#default_value'  => !empty($config['migrate_backup']) ? $config['migrate_backup'] : NULL,
+      '#default_value'  => !empty($config['migrate_backup']) ? $config['migrate_backup'] : 1,
       '#states' => array(
         'invisible' => array(
           ':input[name="s3fs_migrate_scope"]' => array('value' => 0),
