@@ -1,0 +1,32 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the s3fs_migrate module.
+ *
+ */
+
+
+/**
+ * Migrate s3fs_migrate variables to config.
+ */
+function s3fs_migrate_update_1000() {
+  $config = config('s3fs_migrate.settings');
+  $config->set('s3fs_migrate_next_fid', update_variable_get('s3fs_migrate_next_fid', 'dynamic value in file /s3fs_migrate/s3fs_migrate.module line 292'));
+  $config->set('s3fs_migrate_newer_first', update_variable_get('s3fs_migrate_newer_first', array()));
+  $config->set('s3fs_migrate_scope', update_variable_get('s3fs_migrate_scope', ''));
+  $config->set('s3fs_migrate_fields', update_variable_get('s3fs_migrate_fields', array()));
+  $config->save();
+
+  update_variable_del('s3fs_migrate_next_fid');
+  update_variable_del('s3fs_migrate_newer_first');
+  update_variable_del('s3fs_migrate_scope');
+  update_variable_del('s3fs_migrate_fields');
+}
+
+/**
+ * Implements hook_install().
+ */
+function s3fs_migrate_install() {
+  // Dynamically generated variable data was detected.
+  // /s3fs_migrate/s3fs_migrate.module line 292
+}

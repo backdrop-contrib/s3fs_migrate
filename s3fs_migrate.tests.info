@@ -1,0 +1,6 @@
+[S3FSMigrateTestCase]
+name = S3FS Migrate
+description = Test migration of files by the S3FS Migrate module.
+group = S3FS
+file = test/s3fs_migrate.test
+

@@ -1,0 +1,8 @@
+{
+    "_config_name": "s3fs_migrate.settings",
+    "s3fs_migrate_next_fid": "dynamic value in file /s3fs_migrate/s3fs_migrate.module line 292",
+    "s3fs_migrate_newer_first": false,
+    "s3fs_migrate_scope": "",
+    "s3fs_migrate_fields": [],
+    "s3fs_migrate_backup": ""
+}
